@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+body {
+  font-family: "General Sans", sans-serif;
+  width: 100dvw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@layer base {
+  @font-face {
+    font-family: "circular-web";
+    src: url("/fonts/circularweb-book.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "general";
+    src: url("/fonts/general.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "robert-medium";
+    src: url("/fonts/robert-medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "robert-regular";
+    src: url("/fonts/robert-regular.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "zentry";
+    src: url("/fonts/zentry-regular.woff2") format("woff2");
+    font-display: swap;
+  }
+}
+
+@theme {
+  --font-circular: "circular-web", sans-serif;
+  --font-general: "general", sans-serif;
+  --font-robert-medium: "robert-medium", sans-serif;
+  --font-robert-regular: "robert-regular", sans-serif;
+  --font-zentry: "zentry", sans-serif;
+
+  /* Custom Colors - Blue */
+  --color-black-100: #000000;
+  --color-white-100: #ffffff;
+}
+
+.floating-nav {
+  background-color: #ffffff;
+  border: none;
+}
+
+.header-links {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.header-links::after {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+
+.header-links:hover::after {
+ width: 100%;
+}
+
+.footer-links {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.footer-links::after {
+  content: "";
+  background-color: #FFFFFF;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+
+.footer-links:hover::after {
+ width: 100%;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.btn::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: height 0.4s ease;
+}
+
+.btn:hover::after {
+  height: 100%;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
