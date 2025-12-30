@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav ref={navContainerRef} id="navbar" className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 flex items-center justify-between px-10 py-3 bg-transparent">
        <Logo />
 
-       <div id="navlinks">
+       <div id="navlinks" className="pr-15">
          <ul className="flex gap-7 font-circular text-[1.1rem]">
           <NavLink to="/expertise" className="header-links" >Expertise</NavLink>
           <NavLink to="/clients" className="header-links">Clients</NavLink>

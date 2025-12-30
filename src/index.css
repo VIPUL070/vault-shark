@@ -49,6 +49,8 @@ body {
   /* Custom Colors - Blue */
   --color-black-100: #000000;
   --color-white-100: #ffffff;
+  --color-pink-card : #DE99B7;
+  --color-violet-card : #8F85C4;
 }
 
 .floating-nav {
@@ -125,3 +127,4 @@ body {
 .btn:hover {
   color: #ffffff;
 }
+
